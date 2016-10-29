@@ -28,3 +28,15 @@ let aString: string = 'Hi'
 
 let aBoolean: boolean = true;
 //aBoolean = 'hi';
+
+//arrays
+let hobbies = ['cooking', 'cycling']
+//hobbies = 3;
+//hobbies = [100];
+//no eror - hobbies = ['a string'];
+
+//using any[] allows to store any types in array
+let otherHobbies: any[] = ['cooking', 'resting']
+otherHobbies = [3];
+//but has to be an array still
+// otherHobbies = 3;
