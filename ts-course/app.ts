@@ -124,3 +124,12 @@ userData = {
     a: "x",
     b: 3
 }*/
+//complex object and types
+let complexObject: {data: number[], output: (all: boolean) => number[]} = {
+    data: [200, 2.9, 90],
+    output: function (decision: boolean): number[] {
+        return this.data;
+    }
+};
+
+//complexObject = {}

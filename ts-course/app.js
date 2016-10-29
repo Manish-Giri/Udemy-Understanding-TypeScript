@@ -99,3 +99,11 @@ userData = {
     a: "x",
     b: 3
 }*/
+//complex object and types
+var complexObject = {
+    data: [200, 2.9, 90],
+    output: function (all) {
+        return this.data;
+    }
+};
+complexObject = {};
