@@ -44,3 +44,14 @@ otherHobbies = [3];
 //tuples - arrays with mixed types
 let address: [number, string] = [99, "Red Street"];
 //error - address = ['x', 3];
+
+//enum
+enum Color {
+    Gray , //0
+    Green,  //1
+    Blue    //2
+}
+
+let myColor: Color = Color.Green
+console.log(myColor);
+

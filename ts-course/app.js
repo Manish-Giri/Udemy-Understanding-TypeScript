@@ -33,4 +33,13 @@ otherHobbies = [3];
 // otherHobbies = 3;
 //tuples - arrays with mixed types
 var address = [99, "Red Street"];
-address = ['x', 3];
+//error - address = ['x', 3];
+//enum
+var Color;
+(function (Color) {
+    Color[Color["Gray"] = 0] = "Gray";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue"; //2
+})(Color || (Color = {}));
+var myColor = Color.Green;
+console.log(myColor);
