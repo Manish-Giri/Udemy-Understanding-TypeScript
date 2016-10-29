@@ -48,3 +48,25 @@ var car = "BMW";
 console.log(car);
 car = { brand: "BMW", series: 3 };
 console.log(car);
+//functions
+function returnMyName() {
+    //return 3;
+    return myName;
+}
+//void type
+function sayHello() {
+    console.log("Hi there!");
+    //return 2;
+}
+console.log(returnMyName());
+sayHello();
+//argument types
+function multiplyNumbers(value1, value2) {
+    return value1 * value2;
+}
+//returns NaN because no type checking on function args
+console.log(multiplyNumbers(1, 'DaX'));
+function multNumbers(v1, v2) {
+    return v1 * v2;
+}
+console.log(multNumbers(2, 3));
