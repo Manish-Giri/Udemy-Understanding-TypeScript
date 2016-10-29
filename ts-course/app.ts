@@ -133,3 +133,25 @@ let complexObject: {data: number[], output: (all: boolean) => number[]} = {
 };
 
 //complexObject = {}
+
+//type alias
+type Complex = {data: number[], output: (all: boolean) => number[]};
+let complexObject2: Complex = {
+    data: [200, 2.9, 90],
+    output: function (decision: boolean): number[] {
+        return this.data;
+    }
+};
+//union types
+let myRealRealAge: number | string = 27;
+myRealRealAge = '27';
+//myRealRealAge = true;
+
+//NEW IN TS2.0 - never -> never return anything
+function neverReturns(): never {
+    throw new Error("An error");
+}
+
+//NEW IN TS2.0 - NUllABLE types -> never return anything
+//TO prevent assigning nulls to a variable accidentally, add compiler flag "strictNullChecks: false"
+

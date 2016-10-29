@@ -102,8 +102,23 @@ userData = {
 //complex object and types
 var complexObject = {
     data: [200, 2.9, 90],
-    output: function (all) {
+    output: function (decision) {
         return this.data;
     }
 };
-complexObject = {};
+var complexObject2 = {
+    data: [200, 2.9, 90],
+    output: function (decision) {
+        return this.data;
+    }
+};
+//union types
+var myRealRealAge = 27;
+myRealRealAge = '27';
+//myRealRealAge = true;
+//NEW IN TS2.0 - never -> never return anything
+function neverReturns() {
+    throw new Error("An error");
+}
+//NEW IN TS2.0 - NUllABLE types -> never return anything
+//TO prevent assigning nulls to a variable accidentally, add compiler flag "strictNullChecks: false"
