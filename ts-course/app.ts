@@ -19,6 +19,12 @@ let hasHobbies = false;
 
 //assign types
 //number and string assigned because of type 'any'
-let myRealAge;
+let myRealAge: number;
 myRealAge = 27;
-myRealAge = '27';
+//myRealAge = '27';
+
+let aString: string = 'Hi'
+//aString = 3;
+
+let aBoolean: boolean = true;
+//aBoolean = 'hi';
