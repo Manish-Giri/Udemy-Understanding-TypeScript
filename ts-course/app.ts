@@ -55,3 +55,8 @@ enum Color {
 let myColor: Color = Color.Green
 console.log(myColor);
 
+//type any
+let car: any = "BMW"
+console.log(car);
+car = {brand: "BMW", series: 3}
+console.log(car);

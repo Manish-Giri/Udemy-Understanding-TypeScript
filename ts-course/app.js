@@ -43,3 +43,8 @@ var Color;
 })(Color || (Color = {}));
 var myColor = Color.Green;
 console.log(myColor);
+//type any
+var car = "BMW";
+console.log(car);
+car = { brand: "BMW", series: 3 };
+console.log(car);
