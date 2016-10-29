@@ -90,3 +90,17 @@ function multNumbers(v1: number, v2: number): number {
     return v1*v2;
 }
 //console.log(multNumbers(2,'j'));
+
+//function types
+let myMultiply;
+myMultiply = sayHello;
+myMultiply();
+myMultiply = multiplyNumbers;
+console.log(myMultiply(2,20));
+
+//ensuring a variable can be assigned a specific function type
+let myMultiplier: (val1: number, val2: number) => number;
+myMultiplier = multiplyNumbers;
+console.log(myMultiplier(20,10));
+//error
+//myMultiplier = sayHello;
