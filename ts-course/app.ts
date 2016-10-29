@@ -104,3 +104,23 @@ myMultiplier = multiplyNumbers;
 console.log(myMultiplier(20,10));
 //error
 //myMultiplier = sayHello;
+
+//objects and types
+//to ensure a specific set of props on object
+let userData: {name: string, age: number} = {
+    name: "John",
+    age: 20
+}
+
+console.log(userData);
+
+//cannot reassign userData to empty {}
+//app.ts(117,1): error TS2322: Type '{}' is not assignable to type '{ name: string; age: number; }'.
+//userData = {};
+//cannot reassign userData to an object with different props
+/*
+
+userData = {
+    a: "x",
+    b: 3
+}*/

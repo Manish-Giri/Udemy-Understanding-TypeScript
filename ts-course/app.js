@@ -69,4 +69,33 @@ console.log(multiplyNumbers(1, 'DaX'));
 function multNumbers(v1, v2) {
     return v1 * v2;
 }
-console.log(multNumbers(2, 3));
+//console.log(multNumbers(2,'j'));
+//function types
+var myMultiply;
+myMultiply = sayHello;
+myMultiply();
+myMultiply = multiplyNumbers;
+console.log(myMultiply(2, 20));
+//ensuring a variable can be assigned a specific function type
+var myMultiplier;
+myMultiplier = multiplyNumbers;
+console.log(myMultiplier(20, 10));
+//error
+//myMultiplier = sayHello;
+//objects and types
+//to ensure a specific set of props on object
+var userData = {
+    name: "John",
+    age: 20
+};
+console.log(userData);
+//cannot reassign userData to empty {}
+//app.ts(117,1): error TS2322: Type '{}' is not assignable to type '{ name: string; age: number; }'.
+//userData = {};
+//cannot reassign userData to an object with different props
+/*
+
+userData = {
+    a: "x",
+    b: 3
+}*/
