@@ -40,3 +40,7 @@ let otherHobbies: any[] = ['cooking', 'resting']
 otherHobbies = [3];
 //but has to be an array still
 // otherHobbies = 3;
+
+//tuples - arrays with mixed types
+let address: [number, string] = [99, "Red Street"];
+//error - address = ['x', 3];
