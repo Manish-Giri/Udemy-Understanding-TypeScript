@@ -39,4 +39,9 @@ function makeArray() {
 console.log(makeArray(1, 2, 3, 4, 6));
 //IMP DIFFERENCE ->
 //1. When used in a function call, ... is used as a spread operator, ie. it spreads out the array into a list
-//2. When used in a function definition, ... is used as rest op, ie. it packs all list items into an array 
+//2. When used in a function definition, ... is used as rest op, ie. it packs all list items into an array
+//also - rest params should be last ones in arguments
+//DESTRUCTURING ARRAYS
+var myHobbies = ["cooking", "cycling"];
+var hobby1 = myHobbies[0], hobby2 = myHobbies[1];
+console.log("hobby1: " + hobby1 + " and hobby2: " + hobby2);
