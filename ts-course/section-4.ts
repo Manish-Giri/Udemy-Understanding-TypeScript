@@ -11,3 +11,9 @@ console.log(addNumbers(10,15));
 
 const multipliedNumbers = (num1: number, num2: number) => num1 * num2;
 console.log(multipliedNumbers(6,7));
+
+const greeter = () => console.log("Hello World!!");
+greeter();
+
+const greetFriend = friend => console.log(`Hi ${friend}`);
+greetFriend("James");
