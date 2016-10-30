@@ -17,3 +17,17 @@ greeter();
 
 const greetFriend = friend => console.log(`Hi ${friend}`);
 greetFriend("James");
+
+//default parameters
+const countDown = (start: number = 10): void => {
+    while (start > 0) {
+        console.log(start);
+        start--;
+    }
+    console.log(`Done! ${start}`);
+};
+//countDown(10);
+countDown();
+
+
+
