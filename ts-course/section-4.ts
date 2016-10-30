@@ -27,7 +27,20 @@ const countDown = (start: number = 10): void => {
     console.log(`Done! ${start}`);
 };
 //countDown(10);
-countDown();
+//countDown();
 
+//SPREAD OPERATOR
+const numbers = [1,20,3, 55, 99];
+console.log(Math.max(20, 3, 99, 55, 1));
+console.log(Math.max(...numbers));
 
+//REST OPERATOR
+function makeArray(...args: number[]) {
+    return args;
+}
+console.log(makeArray(1,2,3,4,6));
 
+//IMP DIFFERENCE ->
+//1. When used in a function call, ... is used as a spread operator, ie. it spreads out the array into a list
+//2. When used in a function definition, ... is used as rest op, ie. it packs all list items into an array
+//also - rest params should be last ones in arguments
