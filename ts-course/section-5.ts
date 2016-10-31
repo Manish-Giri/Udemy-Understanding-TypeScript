@@ -32,4 +32,11 @@ namespace section5 {
     person1.printAge();
     person1.setType('Cool guy');
     console.log(person1);
+
+    class SubPerson extends Person {
+        name = "Max";
+    }
+
+    let subPerson1 = new SubPerson("Anna", 'maxs');
+    console.log(subPerson1);
 }
