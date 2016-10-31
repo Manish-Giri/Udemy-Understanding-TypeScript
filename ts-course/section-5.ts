@@ -7,7 +7,7 @@ namespace section5 {
     class Person {
         name: string;
         private type: string; //private members are accessible only within the class
-        protected age: number; //private members are accessible from within class and subclass
+        protected age: number = 23; //private members are accessible from within class and subclass
 
         //constructor is optional in TS
         constructor(name: string, public userName: string) {
@@ -16,8 +16,20 @@ namespace section5 {
             this.name = name;
         }
 
+        printAge() {
+            console.log(`Age = ${this.age}`);
+        }
+
+        setType(type: string) {
+            this.type = type;
+            console.log(`Type = ${this.type}`);
+        }
+
     }
 
     let person1 = new Person("John Doe", "jdoe");
+    console.log(person1);
+    person1.printAge();
+    person1.setType('Cool guy');
     console.log(person1);
 }
