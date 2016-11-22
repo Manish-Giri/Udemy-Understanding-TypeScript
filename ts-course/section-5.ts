@@ -34,9 +34,12 @@ namespace section5 {
     console.log(person1);
 
     class SubPerson extends Person {
-        name = "Max";
+        name = "Max"; //this name overrides any name passed in thru constructor
+
     }
 
     let subPerson1 = new SubPerson("Anna", 'maxs');
     console.log(subPerson1);
+
+
 }
