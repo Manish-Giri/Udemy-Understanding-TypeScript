@@ -81,6 +81,31 @@ namespace section5 {
     console.log(Helpers.PI);
     console.log(Helpers.calcCircumference(4.5));
 
+    //-------------------------------
+    //ABSTRACT CLASSES/METHODS
+    abstract class Project {
+        projectName: string = "Default";
+        budget: number = 1000;
+        //abstract methods dont have body
+        abstract changeName(name: string): void;
+        calcBudget(): number {
+            return this.budget * 2;
+        }
+    }
+
+    class ITProject extends Project {
+        changeName(name: string): void {
+            this.projectName = name;
+        }
+    }
+
+    let newProject = new ITProject();
+    console.log(newProject);
+    newProject.changeName("Project Quarter-4");
+    console.log(newProject);
+
+
+
 
 
 }
