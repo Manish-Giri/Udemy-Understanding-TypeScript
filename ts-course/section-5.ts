@@ -108,9 +108,13 @@ namespace section5 {
     //PRIVATE CONSTRUCTORS
     class OnlyOne {
         private static instance: OnlyOne;
+        //make name property readonly
+        public readonly name: string;
 
         //private constructor
-        private constructor(public name: string) {}
+        private constructor(name: string) {
+            this.name = name;
+        }
 
         //method to set the instance
         static getInstance() {
@@ -125,6 +129,10 @@ namespace section5 {
     //let wrong = new OnlyOne("only one");
     let right = OnlyOne.getInstance();
     console.log(right);
+    //read property name
+    console.log(right.name);
+    //try to change name - error
+    //right.name = "new one";
 
 
 
