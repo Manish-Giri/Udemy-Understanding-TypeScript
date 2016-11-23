@@ -85,4 +85,30 @@ var section5;
     }());
     console.log(Helpers.PI);
     console.log(Helpers.calcCircumference(4.5));
+    //-------------------------------
+    //ABSTRACT CLASSES/METHODS
+    var Project = (function () {
+        function Project() {
+            this.projectName = "Default";
+            this.budget = 1000;
+        }
+        Project.prototype.calcBudget = function () {
+            return this.budget * 2;
+        };
+        return Project;
+    }());
+    var ITProject = (function (_super) {
+        __extends(ITProject, _super);
+        function ITProject() {
+            _super.apply(this, arguments);
+        }
+        ITProject.prototype.changeName = function (name) {
+            this.projectName = name;
+        };
+        return ITProject;
+    }(Project));
+    var newProject = new ITProject();
+    console.log(newProject);
+    newProject.changeName("Project Quarter-4");
+    console.log(newProject);
 })(section5 || (section5 = {}));
