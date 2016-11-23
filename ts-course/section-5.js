@@ -111,4 +111,24 @@ var section5;
     console.log(newProject);
     newProject.changeName("Project Quarter-4");
     console.log(newProject);
+    //-------------------------------
+    //PRIVATE CONSTRUCTORS
+    var OnlyOne = (function () {
+        //private constructor
+        function OnlyOne(name) {
+            this.name = name;
+        }
+        //method to set the instance
+        OnlyOne.getInstance = function () {
+            if (!OnlyOne.instance) {
+                OnlyOne.instance = new OnlyOne("The only one");
+            }
+            return OnlyOne.instance;
+        };
+        return OnlyOne;
+    }());
+    //try to create instance outside - error
+    //let wrong = new OnlyOne("only one");
+    var right = OnlyOne.getInstance();
+    console.log(right);
 })(section5 || (section5 = {}));
