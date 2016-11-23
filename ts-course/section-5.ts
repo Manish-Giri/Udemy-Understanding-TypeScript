@@ -69,6 +69,17 @@ namespace section5 {
     plant.species = "gr";
     console.log(plant.species);
 
+    //-------------------------------
+    //STATIC
+    class Helpers {
+        static PI: number = 3.141;
+        static calcCircumference(diameter: number): number {
+            return this.PI * diameter;
+        }
+    }
+
+    console.log(Helpers.PI);
+    console.log(Helpers.calcCircumference(4.5));
 
 
 

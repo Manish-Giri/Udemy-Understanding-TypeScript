@@ -72,4 +72,17 @@ var section5;
     console.log(plant.species);
     plant.species = "gr";
     console.log(plant.species);
+    //-------------------------------
+    //STATIC
+    var Helpers = (function () {
+        function Helpers() {
+        }
+        Helpers.calcCircumference = function (diameter) {
+            return this.PI * diameter;
+        };
+        Helpers.PI = 3.141;
+        return Helpers;
+    }());
+    console.log(Helpers.PI);
+    console.log(Helpers.calcCircumference(4.5));
 })(section5 || (section5 = {}));
