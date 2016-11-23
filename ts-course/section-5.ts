@@ -104,6 +104,28 @@ namespace section5 {
     newProject.changeName("Project Quarter-4");
     console.log(newProject);
 
+    //-------------------------------
+    //PRIVATE CONSTRUCTORS
+    class OnlyOne {
+        private static instance: OnlyOne;
+
+        //private constructor
+        private constructor(public name: string) {}
+
+        //method to set the instance
+        static getInstance() {
+            if(!OnlyOne.instance) {
+                OnlyOne.instance = new OnlyOne("The only one");
+            }
+            return OnlyOne.instance;
+        }
+    }
+
+    //try to create instance outside - error
+    //let wrong = new OnlyOne("only one");
+    let right = OnlyOne.getInstance();
+    console.log(right);
+
 
 
 
