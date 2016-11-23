@@ -36,10 +36,40 @@ var section5;
         __extends(SubPerson, _super);
         function SubPerson() {
             _super.apply(this, arguments);
-            this.name = "Max";
+            this.name = "Max"; //this name overrides any name passed in thru constructor
         }
         return SubPerson;
     }(Person));
     var subPerson1 = new SubPerson("Anna", 'maxs');
     console.log(subPerson1);
+    //GETTERS and SETTERS
+    var Plant = (function () {
+        function Plant() {
+            this._species = "hibiscus";
+        }
+        Object.defineProperty(Plant.prototype, "species", {
+            //getter
+            get: function () {
+                return this._species;
+            },
+            //setter
+            set: function (name) {
+                if (name.length > 3) {
+                    this._species = name;
+                }
+                else {
+                    this._species = "hibiscus";
+                }
+            },
+            enumerable: true,
+            configurable: true
+        });
+        return Plant;
+    }());
+    var plant = new Plant();
+    console.log(plant.species);
+    plant.species = "green plant";
+    console.log(plant.species);
+    plant.species = "gr";
+    console.log(plant.species);
 })(section5 || (section5 = {}));

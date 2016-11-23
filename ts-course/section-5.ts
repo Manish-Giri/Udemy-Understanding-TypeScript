@@ -41,5 +41,35 @@ namespace section5 {
     let subPerson1 = new SubPerson("Anna", 'maxs');
     console.log(subPerson1);
 
+    //GETTERS and SETTERS
+
+    class Plant {
+        private _species: string = "hibiscus";
+
+        //getter
+        get species() {
+            return this._species;
+        }
+
+        //setter
+        set species(name: string) {
+            if(name.length > 3) {
+                this._species = name;
+            }
+            else {
+                this._species = "hibiscus";
+            }
+        }
+    }
+
+    let plant = new Plant();
+    console.log(plant.species);
+    plant.species = "green plant";
+    console.log(plant.species);
+    plant.species = "gr";
+    console.log(plant.species);
+
+
+
 
 }
