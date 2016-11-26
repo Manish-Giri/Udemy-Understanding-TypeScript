@@ -67,10 +67,25 @@ namespace section7 {
     }
     console.log(myFunc(10,20));
 
+    console.log("****************************");
+    console.log("Interface Inheritance");
 
+    interface AgedPerson extends NamedPerson {
+        age: number;
+    }
 
+    const agedPerson:AgedPerson = {
+        //an object using this inherited interface must implement all mandator properties
+        //of this interface, and the parent interface
+        age: 35,
+        firstName: "Bill",
+        greet(name: string) {
+            console.log("Hi " + name);
+        }
+    }
 
-
-
+    console.log(agedPerson);
+    agedPerson.greet("Bill");
 
 }
+
