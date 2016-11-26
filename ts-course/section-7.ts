@@ -55,6 +55,17 @@ namespace section7 {
     myPerson.firstName = "John";
     console.log(myPerson.firstName);
     myPerson.greet("Wayne");
+    console.log("****************************");
+    console.log("Interfaces as function types");
+
+    interface DoubleValueFunction {
+        (val1: number, val2: number): number;
+    }
+    
+    let myFunc: DoubleValueFunction = function (v1: number, v2: number) {
+        return (v1 + v2) * 2;
+    }
+    console.log(myFunc(10,20));
 
 
 
