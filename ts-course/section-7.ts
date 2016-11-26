@@ -8,6 +8,11 @@ namespace section7 {
     console.log("****************************");
     interface NamedPerson {
         firstName: string;
+        //optional argument - may or may not be present
+        age?: number;
+        //[] notation for property whose names you don't know
+        [propName: string]: any;
+
 
     }
 
@@ -21,10 +26,20 @@ namespace section7 {
 
     const person = {
         firstName: "Max",
-        age: 27
+        age: 27,
+        hobbies: ["Cooking", "cycling"]
     };
 
+    //object literals are checked more strictly in TS
     greet(person);
+    //greet({firstName: "Max", age: 29});
     changeName(person);
     greet(person);
+
+
+
+
+
+
+
 }
