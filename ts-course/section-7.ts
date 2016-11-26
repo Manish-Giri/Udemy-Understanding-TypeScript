@@ -12,6 +12,8 @@ namespace section7 {
         age?: number;
         //[] notation for property whose names you don't know
         [propName: string]: any;
+        //add methods on interfaces
+        greet(name: string): void;
 
 
     }
@@ -27,7 +29,10 @@ namespace section7 {
     const person = {
         firstName: "Max",
         age: 27,
-        hobbies: ["Cooking", "cycling"]
+        hobbies: ["Cooking", "cycling"],
+        greet(lastName: string) {
+            console.log("I am " + this.firstName + " " + lastName);
+        }
     };
 
     //object literals are checked more strictly in TS
@@ -35,6 +40,21 @@ namespace section7 {
     //greet({firstName: "Max", age: 29});
     changeName(person);
     greet(person);
+    console.log("****************************");
+    person.greet("Willis");
+    console.log("****************************");
+
+    class Person implements NamedPerson {
+        firstName: string;
+        greet(lastName: string) {
+            console.log("In class, I am " + this.firstName + " " + lastName);
+        }
+    }
+
+    const myPerson = new Person();
+    myPerson.firstName = "John";
+    console.log(myPerson.firstName);
+    myPerson.greet("Wayne");
 
 
 
