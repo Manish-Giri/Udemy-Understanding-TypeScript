@@ -40,4 +40,23 @@ var section7;
     myPerson.firstName = "John";
     console.log(myPerson.firstName);
     myPerson.greet("Wayne");
+    console.log("****************************");
+    console.log("Interfaces as function types");
+    var myFunc = function (v1, v2) {
+        return (v1 + v2) * 2;
+    };
+    console.log(myFunc(10, 20));
+    console.log("****************************");
+    console.log("Interface Inheritance");
+    var agedPerson = {
+        //an object using this inherited interface must implement all mandator properties
+        //of this interface, and the parent interface
+        age: 35,
+        firstName: "Bill",
+        greet: function (name) {
+            console.log("Hi " + name);
+        }
+    };
+    console.log(agedPerson);
+    agedPerson.greet("Bill");
 })(section7 || (section7 = {}));

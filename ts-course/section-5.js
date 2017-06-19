@@ -131,4 +131,6 @@ var section5;
     //let wrong = new OnlyOne("only one");
     var right = OnlyOne.getInstance();
     console.log(right);
+    //read property name
+    console.log(right.name);
 })(section5 || (section5 = {}));
