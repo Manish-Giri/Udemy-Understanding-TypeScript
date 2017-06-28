@@ -38,6 +38,9 @@ namespace exercise8 {
     numberMap.printMap();
 
     // string map
+    const stringMap = new MyMap<string>();
+    stringMap.setItem("John", "Doe");
+    stringMap.printMap();
 
 
 }
