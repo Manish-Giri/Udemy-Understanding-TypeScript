@@ -17,4 +17,11 @@ namespace section8 {
 
     console.log(betterEcho("John"));
     console.log(betterEcho(27));
+
+    let testResults: Array<number> = [1, 2, 4];
+    testResults.push(10);
+    // error
+    // testResults.push("one");
+
+    console.log(testResults);
 }
