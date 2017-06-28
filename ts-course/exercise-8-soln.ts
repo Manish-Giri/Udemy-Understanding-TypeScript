@@ -27,10 +27,17 @@ namespace exercise8 {
         }
     }
 
+    // numbermap
     const numberMap = new MyMap<number>();
     numberMap.setItem("zombies", 5);
     numberMap.setItem("doges", 10);
 
     console.log(numberMap.getItem("doges"));
+    numberMap.printMap();
+    numberMap.clear();
+    numberMap.printMap();
+
+    // string map
+
 
 }
